@@ -1,5 +1,10 @@
 # Hacker_Language
 
+## APS LÓGICA DA COMPUTAÇÃO
+
+###Ideia:
+A ideia por tras dessa linguagem é usala para facilitar a criação de payloads e micro codigos para realizar testes em aplicações, a principal função futura é atrelar com bibliotecas que executam ataques para automatizar e facilitar mais do que as ferramentas ja fazem hoje em dia.
+
 EBNF:
 
 PROGRAM = "hack", "\n", BLOCK ;
