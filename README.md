@@ -1,54 +1,77 @@
-# Hacker_Language
+# C-PTBR
 
 ## APS LÓGICA DA COMPUTAÇÃO
 
 ###Ideia:
-A ideia por tras dessa linguagem é usala para facilitar a criação de payloads e micro codigos para realizar testes em aplicações, a principal função futura é atrelar com bibliotecas que executam ataques para automatizar e facilitar mais do que as ferramentas ja fazem hoje em dia.
-
-EBNF:
-
-PROGRAM = "hack", "\n", BLOCK ;
-
-BLOCK = { STATEMENT } ;
-
-STATEMENT = ( HACK_DECLARATION | ASSIGNMENT | EXFILTRATE | LOOPHOLE_WHILE | IF ), "\n" ;
-
-HACK_DECLARATION = "hack", IDENTIFIER, ["set", BYPASS_EXP] ;
-
-ASSIGNMENT = IDENTIFIER, "set", BYPASS_EXP ;
-
-BYPASS_EXP = EXP ;
-
-EXP = TERM, { ("buff" | "debuff"), TERM } ;
-
-TERM = FACTOR, { ("increase" | "decrease"), FACTOR } ;
-
-FACTOR = INTEGER | IDENTIFIER | "(" , EXP , ")" | UNARY_OP, FACTOR ;
-
-EXFILTRATE = "exfiltrate", "(", BYPASS_EXP, ")" ;
-
-LOOPHOLE_WHILE = "loophole", BYPASS_EXP, "until", "\n", { STATEMENT }, "end" ;
-
-IF = "breach", BYPASS_EXP, "if", "\n", { STATEMENT }, "end" ;
-
-TYPE = "loot" | "intel" | "payload" | "flag" ;
-
-LOGIC_OP = "and/or" | "XOR" | "invert" ;
+A linguagem de programação desenvolvida foi pensada para ser uma ferramenta didática e fácil de aprender para novos programadores brasileiros, com palavras reservadas em português. Ela é pouco tipada, então você pode aprender lógica de programação sem se preocupar muito com a sintaxe.
+O principal objetivo é conseguir trazer programação o mais cedo possivel para as crianças/adolecentes, com a linguagem criada é possivél criar funções para resolver problemas matematicos faceis e despertar o interesse em programação, como pode ser visto nos exemplos abaixo.
+Além de apresentar possibilidade de uso de if/while para realizar condições lógicas.
 
 
-INTEGER = DIGIT, { DIGIT } ;
+```` py
+// Função que calcula a área de um retângulo
+funcao areaRetangulo(largura, altura) {
+    retorna largura * altura;
+}
+l = 5;
+h = 10;
+resultado = areaRetangulo(l, h);
+imprime(resultado);
 
-IDENTIFIER = LETTER, { LETTER | DIGIT | "_" } ;
+// Função que verifica se um número é par
+funcao ePar(n) {
+    se (n / 2 * 2 == n) {
+        resultado = 1;
+    } senao {
+        resultado = 0;
+    }
+    retorna resultado;
+}
 
-UNARY_OP = "invert" | "-" ;
+````
 
-DIGIT = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
 
-LETTER = "A" | "B" | "C" | "D" | "E" | "F" | "G"
-    | "H" | "I" | "J" | "K" | "L" | "M" | "N"
-    | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
-    | "V" | "W" | "X" | "Y" | "Z" | "a" | "b"
-    | "c" | "d" | "e" | "f" | "g" | "h" | "i"
-    | "j" | "k" | "l" | "m" | "n" | "o" | "p"
-    | "q" | "r" | "s" | "t" | "u" | "v" | "w"
-    | "x" | "y" | "z" ;
+## EBNF
+```` py
+
+BLOCO          =  {COMANDO} ;
+ 
+COMANDO        =  ( λ | ATRIBUICAO | IMPRESSAO | ENQUANTO | SE | FUNCAO | RETORNA | CHAMADA), ";", "\n" ;
+ 
+ATRIBUICAO     =  IDENTIFICADOR,(["=",RELEXPR] |"=", RELEXPR );
+
+IMPRESSAO      =  "imprime", "(" RELEXPR ")" ;
+ 
+SE             =  "se", "(", RELEXPR, ")", "{", COMANDO, "}", ["senao", "{", COMANDO, "}"] ;
+ 
+ENQUANTO       =  "enquanto", "(", RELEXPR, ")", "{", COMANDO,"}" ;
+  
+FUNCAO         =  "funcao", IDENTIFICADOR, "(", [PARAMETRO], ")", "{", "\n", {BLOCO}, "}" ;
+
+PARAMETRO      =  IDENTIFICADOR, {",", IDENTIFICADOR} ;
+
+CHAMADA        = IDENTIFICADOR, "(", [RELEXPR, {",", RELEXPR}] ,")";
+ 
+RETORNA        =  "retorna", RELEXPR;
+
+RELEXPR        =  EXPRESSAO, { ("<" | ">" | "==" ), EXPRESSAO } ;
+ 
+EXPRESSAO      =  TERMO {("+" | "-", "ou") TERMO} ;
+ 
+TERMO          =  FATOR {("*" | "/" | "e"), FATOR} ;
+ 
+FATOR          = (NÚMERO | STRING | IDENTIFICADOR, ["(", [RELEXPR, {",", RELEXPR}] ,")"] | ("+" | "-" | "!"), FACTOR) | "(", RELEXPR, ")" ;
+ 
+CHAMADAFUNCAO  =  IDENTIFICADOR "(" [EXPRESSAO {"," EXPRESSAO}] ")" ;
+ 
+IDENTIFICADOR  =  LETRA, {LETRA | DIGITO | "_"} ;
+ 
+NÚMERO         =  DIGITO, { DIGITO } ;
+ 
+STRING         =  '"' {LETRA} '"' ;
+
+LETRA          =  ( a | ... | z | A | ... | Z ) ;
+ 
+DIGITO         =  ( 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 ) ;
+
+````
