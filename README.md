@@ -2,7 +2,7 @@
 
 ## APS LÓGICA DA COMPUTAÇÃO
 
-###Ideia:
+### Ideia:
 A linguagem de programação desenvolvida foi pensada para ser uma ferramenta didática e fácil de aprender para novos programadores brasileiros, com palavras reservadas em português. Ela é pouco tipada, então você pode aprender lógica de programação sem se preocupar muito com a sintaxe.
 O principal objetivo é conseguir trazer programação o mais cedo possivel para as crianças/adolecentes, com a linguagem criada é possivél criar funções para resolver problemas matematicos faceis e despertar o interesse em programação, como pode ser visto nos exemplos abaixo.
 Além de apresentar possibilidade de uso de if/while para realizar condições lógicas.
