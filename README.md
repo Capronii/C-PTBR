@@ -11,6 +11,7 @@ Além disso, a linguagem oferece suporte para uso de estruturas condicionais (if
 
 
 ### Exemplo de uso dentro do testes.txt
+### Optei por remover while e function pra deixar o mais simples possivel para diminuir a idade minima para uso e poder ser usado para aprender matematica básica escolar e despertar o interesse em conhecer lingaguem mais completas e com um dicionario e gramática mais avançados
 ### Para rodar (python main.py testes.py)
 
 ## EBNF
