@@ -1,0 +1,62 @@
+// Impressão
+imprime("Começando a sessão de testes!");
+ 
+// Condicional If
+x = 10;
+y = 20;
+z = 30;
+se (x < y e y < z) {
+    imprime("x é menor que y e y é menor que z");
+}
+
+// Imprime uma soma
+x = 5;
+y = 5;
+imprime(x + y);
+
+
+// Loops condicionais
+x = 10;
+y = 20;
+se (x > y) {
+    imprime(x);
+} senao {
+    imprime(y);
+}
+
+
+// Loops condicionais
+temperatura = 25;
+se (temperatura < 20 ou temperatura > 30) {
+    imprime("A temperatura está dentro do intervalo");
+} senao {
+    imprime("A temperatura está fora do intervalo");
+}
+
+// Exemplo de uso de variáveis e múltiplas condições lógicas
+idade = 25;
+temCarteira = 1; 
+se ((idade > 17 e idade < 66) e temCarteira == 1) {
+    imprime("Pode dirigir");
+} senao {
+    imprime("Não pode dirigir");
+}
+
+
+// Exemplo de uso de variáveis e múltiplas condições lógicas
+nota1 = 6;
+nota2 = 5;
+nota3 = 5;
+media = (nota1 + nota2 + nota3) / 3;
+se (media > 5 e (nota1 > 5 e nota2 > 5 e nota3 > 5)) {
+    imprime("Aprovado");
+} senao {
+    imprime("Reprovado");
+}
+
+// Concatenação de strings
+nome = "teste";
+sobrenome = "funciona pelo amor de deus";
+nomeCompleto = nome + " " + sobrenome;
+imprime(nomeCompleto);
+
