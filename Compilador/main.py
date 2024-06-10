@@ -165,14 +165,7 @@ class StringVal(Node):
         super().__init__(value, children)
     
     def Evaluate(self, ST):
-        return str(self.value)
-    
-class Return(Node):
-    def __init__(self, value, children):
-        super().__init__(value, children)
-
-    def Evaluate(self, ST):
-        return self.children[0].Evaluate(ST)
+        return str(self.value)'
 
 class Token:
     def __init__(self, type: str, value: int):
