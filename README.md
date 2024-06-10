@@ -5,12 +5,13 @@
 ### Ideia:
 A linguagem de programação desenvolvida foi pensada como uma ferramenta didática e fácil de aprender para novos programadores brasileiros, com palavras reservadas em português. Ela é fracamente tipada, permitindo que você aprenda lógica de programação sem se preocupar muito com a sintaxe.
 
-O principal objetivo é trazer a programação o mais cedo possível para crianças e adolescentes. Com a linguagem criada, é possível desenvolver funções para resolver problemas matemáticos simples e despertar o interesse em programação, como demonstrado nos exemplos abaixo.
+O principal objetivo é trazer a programação o mais cedo possível para crianças e adolescentes. Com a linguagem criada, é possível desenvolver funções para resolver problemas matemáticos simples e despertar o interesse em programação.
 
 Além disso, a linguagem oferece suporte para uso de estruturas condicionais (if) para realizar operações lógicas.
 
 
-
+###Exemplo de uso dentro do testes.txt
+### Para rodar (python main.py testes.py)
 
 ## EBNF
 ```` py
