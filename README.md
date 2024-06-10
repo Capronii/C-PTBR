@@ -10,7 +10,7 @@ O principal objetivo é trazer a programação o mais cedo possível para crian�
 Além disso, a linguagem oferece suporte para uso de estruturas condicionais (if) para realizar operações lógicas.
 
 
-###Exemplo de uso dentro do testes.txt
+### Exemplo de uso dentro do testes.txt
 ### Para rodar (python main.py testes.py)
 
 ## EBNF
